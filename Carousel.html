@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    .box {
+        width: 640px;
+        height: 330px;
+        padding: 8px;
+        border: 1px solid green;
+        margin: 100px auto;
+    }
+    
+    .inner {
+        position: relative;
+        overflow: hidden;
+        height: 330px;
+    }
+    
+    .lizp {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .ulLine {
+        width: 800%;
+        position: absolute;
+        left: 0;
+    }
+    
+    .ulVertical {
+        height: 800%;
+        position: absolute;
+        top: 0;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    #list {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -85px;
+        z-index: 1;
+    }
+    
+    #list i {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #333;
+        float: left;
+        font-style: normal;
+        line-height: 20px;
+        font-size: 14px;
+        text-align: center;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    #list i:last-child {
+        margin-right: 0;
+    }
+    
+    #list i.current {
+        background-color: skyblue;
+        color: #fff;
+    }
+    
+    #arrow {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-top: -30px;
+        display: none;
+        z-index: 1;
+    }
+    
+    .arrow-left,
+    .arrow-right {
+        width: 30px;
+        height: 60px;
+        position: absolute;
+        font: 20px/60px "consolas";
+        color: #fff;
+        background-color: rgba(0, 0, 0, .3);
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .arrow-right {
+        right: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <input id="left" type="button" value="左右">
+    <input id="top" type="button" value="上下">
+    <input id="opacity" type="button" value="渐变">
+    <div class="box" id="box">
+        <div class="inner" id="inner">
+            <ul>
+                <li>
+                    <a href="#"><img src="img/1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/6.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/1.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div id="list">
+                <i class="current">1</i>
+                <i>2</i>
+                <i>3</i>
+                <i>4</i>
+                <i>5</i>
+                <i>6</i>
+            </div>
+            <div id="arrow">
+                <span class="arrow-left">&lt;</span>
+                <span class="arrow-right">&gt;</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./animateV.js"></script>
+<script src="./Carousel.js"></script>
+
+</html>
